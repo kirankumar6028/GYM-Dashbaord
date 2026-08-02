@@ -1,264 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness Dashboard</title>
 
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPL A/B Fitness Dashboard</title>
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-    background:#111827;
-    color:white;
-}
-
-.container{
-    width:95%;
-    max-width:1300px;
-    margin:auto;
-    padding:25px;
-}
-
-h1{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#1f2937;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(0,0,0,.4);
-}
-
-.card h2{
-    margin-bottom:15px;
-}
-
-.progress{
-    width:100%;
-    height:22px;
-    background:#444;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.bar{
-    height:100%;
-    width:20%;
-    background:#22c55e;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-td{
-    padding:8px;
-    border-bottom:1px solid #444;
-}
-
-input[type=checkbox]{
-    transform:scale(1.3);
-}
-
-.weight{
-    font-size:40px;
-    color:#4ade80;
-    margin:10px 0;
-}
-
-.goal{
-    color:#facc15;
-}
-
-button{
-    padding:10px 15px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    background:#22c55e;
-    color:white;
-    margin-top:10px;
-}
-
-button:hover{
-    background:#16a34a;
-}
-
-textarea{
-    width:100%;
-    height:120px;
-    border-radius:10px;
-    padding:10px;
-    margin-top:10px;
-}
-
-</style>
-
-</head>
-
-<body>
-
+body{font-family:Arial;background:#111827;color:#eee;margin:0}
+header{background:#1f2937;padding:20px;text-align:center}
+.container{max-width:1100px;margin:auto;padding:20px}
+.card{background:#1f2937;border-radius:10px;padding:16px;margin:16px 0}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #374151;padding:8px}
+th{background:#0f172a}
+small{color:#9ca3af}
+</style></head><body>
+<header><h1>5-Day PPL A/B Program</h1>
+<p>Goal: Fat Loss + Muscle Gain | 86 kg | 168 cm</p></header>
 <div class="container">
-
-<h1>🏋 Fitness Dashboard</h1>
-
-<div class="grid">
-
-<div class="card">
-<h2>Body Stats</h2>
-
-<p>Height : <b>168 cm</b></p>
-<p>Weight : <span class="weight">86 kg</span></p>
-<p>Goal Weight : <span class="goal">72 kg</span></p>
-
-<br>
-
-<p>BMI : <b>30.5</b></p>
-<p>Calories : <b>2100 kcal</b></p>
-<p>Protein : <b>160 g</b></p>
-<p>Water : <b>4 L</b></p>
-
-<br>
-
-<p>Progress</p>
-
-<div class="progress">
-<div class="bar"></div>
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Workout Plan</h2>
-
-<table>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Incline Bench Press</td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Flat DB Press</td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Cable Fly</td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Shoulder Press</td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Lateral Raise</td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Tricep Pushdown</td>
-</tr>
-
-<tr>
-<td><input type="checkbox"></td>
-<td>Overhead Extension</td>
-</tr>
-
-</table>
-
-</div>
-
-<div class="card">
-
-<h2>Weekly Split</h2>
-
-<table>
-
-<tr><td>Monday</td><td>Push</td></tr>
-<tr><td>Tuesday</td><td>Pull</td></tr>
+<div class="card"><h2>Weekly Split</h2>
+<table><tr><th>Day</th><th>Workout</th></tr>
+<tr><td>Monday</td><td>Push A</td></tr>
+<tr><td>Tuesday</td><td>Pull A</td></tr>
 <tr><td>Wednesday</td><td>Legs</td></tr>
-<tr><td>Thursday</td><td>Upper</td></tr>
-<tr><td>Friday</td><td>Arms + Weak Points</td></tr>
-<tr><td>Saturday</td><td>Rest</td></tr>
-<tr><td>Sunday</td><td>Rest</td></tr>
+<tr><td>Thursday</td><td>Push B</td></tr>
+<tr><td>Friday</td><td>Pull B</td></tr>
+</table></div>
 
-</table>
+<div class="card"><h2>Push A</h2>
+<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
+<tr><td>Incline Barbell Press</td><td>Upper Chest</td><td>4×6-8</td></tr>
+<tr><td>Flat Dumbbell Press</td><td>Mid Chest</td><td>3×8-10</td></tr>
+<tr><td>High-to-Low Cable Fly</td><td>Lower Chest</td><td>3×12-15</td></tr>
+<tr><td>Seated DB Shoulder Press</td><td>Front Delts</td><td>3×8-10</td></tr>
+<tr><td>DB Lateral Raise</td><td>Side Delts</td><td>4×12-15</td></tr>
+<tr><td>Reverse Pec Deck</td><td>Rear Delts</td><td>3×15</td></tr>
+<tr><td>Rope Pushdown</td><td>Lateral Triceps</td><td>3×10-12</td></tr>
+<tr><td>Overhead Rope Extension</td><td>Long Head</td><td>3×10-12</td></tr></table></div>
 
-</div>
+<div class="card"><h2>Pull A</h2>
+<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
+<tr><td>Wide Lat Pulldown</td><td>Lat Width</td><td>3×10</td></tr>
+<tr><td>Barbell Row</td><td>Mid Back</td><td>3×8</td></tr>
+<tr><td>Seated Cable Row</td><td>Thickness</td><td>3×10-12</td></tr>
+<tr><td>Straight-arm Pulldown</td><td>Lower Lats</td><td>3×12-15</td></tr>
+<tr><td>Face Pull</td><td>Rear Delts</td><td>3×15</td></tr>
+<tr><td>EZ Curl</td><td>Biceps</td><td>3×10</td></tr>
+<tr><td>Incline DB Curl</td><td>Long Head</td><td>3×12</td></tr>
+<tr><td>Hammer Curl</td><td>Brachialis</td><td>3×12</td></tr></table></div>
 
-<div class="card">
+<div class="card"><h2>Legs</h2>
+<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
+<tr><td>Back Squat</td><td>Quads</td><td>4×8</td></tr>
+<tr><td>Romanian Deadlift</td><td>Hamstrings</td><td>4×10</td></tr>
+<tr><td>Leg Press</td><td>Quads</td><td>3×12</td></tr>
+<tr><td>Leg Curl</td><td>Hamstrings</td><td>3×15</td></tr>
+<tr><td>Bulgarian Split Squat</td><td>Glutes</td><td>3×12</td></tr>
+<tr><td>Standing Calf Raise</td><td>Calves</td><td>4×15</td></tr>
+<tr><td>Cable Crunch + Hanging Leg Raise</td><td>Core</td><td>3×15</td></tr></table></div>
 
-<h2>Measurements</h2>
+<div class="card"><h2>Push B</h2>
+<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
+<tr><td>Incline DB Press</td><td>Upper Chest</td><td>4×8-10</td></tr>
+<tr><td>Machine Chest Press</td><td>Mid Chest</td><td>3×10</td></tr>
+<tr><td>Decline Press / Assisted Dips</td><td>Lower Chest</td><td>3×10-12</td></tr>
+<tr><td>Machine Shoulder Press</td><td>Front Delts</td><td>3×10</td></tr>
+<tr><td>Cable Lateral Raise</td><td>Side Delts</td><td>4×15</td></tr>
+<tr><td>Face Pull</td><td>Rear Delts</td><td>3×15</td></tr>
+<tr><td>Straight Bar Pushdown</td><td>Lateral Triceps</td><td>3×12</td></tr>
+<tr><td>Overhead DB Extension</td><td>Long Head</td><td>3×12</td></tr></table></div>
 
-<table>
+<div class="card"><h2>Pull B</h2>
+<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
+<tr><td>Close Grip Pulldown</td><td>Lower Lats</td><td>3×10</td></tr>
+<tr><td>Chest Supported Row</td><td>Mid Back</td><td>3×10</td></tr>
+<tr><td>Single Arm DB Row</td><td>Lats</td><td>3×10</td></tr>
+<tr><td>Cable Row</td><td>Thickness</td><td>3×12</td></tr>
+<tr><td>Preacher Curl</td><td>Short Head</td><td>3×10</td></tr>
+<tr><td>Bayesian Cable Curl</td><td>Long Head</td><td>3×12</td></tr>
+<tr><td>Cross-body Hammer Curl</td><td>Brachialis</td><td>3×12</td></tr></table></div>
 
-<tr><td>Chest</td><td>____</td></tr>
-<tr><td>Shoulders</td><td>____</td></tr>
-<tr><td>Waist</td><td>____</td></tr>
-<tr><td>Biceps</td><td>____</td></tr>
-<tr><td>Forearms</td><td>____</td></tr>
-<tr><td>Thigh</td><td>____</td></tr>
-<tr><td>Calves</td><td>____</td></tr>
-
-</table>
-
-</div>
-
-<div class="card">
-
-<h2>Today's Diet</h2>
-
-<textarea placeholder="Breakfast&#10;Lunch&#10;Dinner&#10;Snacks"></textarea>
-
-<button onclick="alert('Saved Successfully!')">
-Save
-</button>
-
-</div>
-
-<div class="card">
-
-<h2>Goals</h2>
-
-<ul>
-
-<li>✔ Weight : 72 kg</li>
-<li>✔ Protein : 160 g</li>
-<li>✔ Calories : 2100 kcal</li>
-<li>✔ Gym : 5 Days</li>
-<li>✔ Cardio : 30 Minutes</li>
-<li>✔ Water : 4 L</li>
-<li>✔ Sleep : 8 Hours</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
+<div class="card"><h2>Notes</h2><ul>
+<li>Cardio: 20 min treadmill (6 incline, 4.5 km/h) + 10 min cross trainer.</li>
+<li>Protein: 160-170 g/day.</li>
+<li>Calories: ~2100/day.</li>
+<li>Increase weight when you reach the top of the rep range with good form.</li>
+</ul></div>
+</div></body></html>
