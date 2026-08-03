@@ -1,1 +1,485 @@
 
+/* ==========================================
+   CARDS.CSS
+   Exercise Card Components
+========================================== */
+
+/* Exercise Card */
+
+.exercise-card{
+
+    background:#1f2937;
+
+    border:1px solid #334155;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.exercise-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+/* Image */
+
+.exercise-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.exercise-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.exercise-image .difficulty{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+/* Content */
+
+.exercise-body{
+
+    padding:22px;
+
+}
+
+.exercise-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.exercise-title h2{
+
+    color:#22c55e;
+
+    font-size:24px;
+
+}
+
+.exercise-subtitle{
+
+    color:#94a3b8;
+
+    margin-bottom:18px;
+
+}
+
+/* Target Muscles */
+
+.target-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+.target-box{
+
+    background:#111827;
+
+    padding:15px;
+
+    border-radius:12px;
+
+}
+
+.target-box h4{
+
+    color:#22c55e;
+
+    margin-bottom:10px;
+
+}
+
+.target-box ul{
+
+    padding-left:18px;
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+}
+
+/* Information */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.info-card{
+
+    background:#111827;
+
+    border-radius:12px;
+
+    padding:15px;
+
+}
+
+.info-card h4{
+
+    margin-bottom:10px;
+
+    color:#22c55e;
+
+}
+
+.info-card p{
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+}
+
+/* Sets & Reps */
+
+.sets{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:20px 0;
+
+}
+
+.set{
+
+    background:#0f172a;
+
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    border:1px solid #334155;
+
+}
+
+/* Alternatives */
+
+.alternatives{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.alt{
+
+    background:#1d4ed8;
+
+    padding:8px 14px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+/* Muscle Rating */
+
+.rating{
+
+    margin-top:18px;
+
+}
+
+.rating-item{
+
+    margin-bottom:12px;
+
+}
+
+.rating-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:6px;
+
+}
+
+.bar{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#334155;
+
+}
+
+.bar-fill{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#22c55e,#84cc16);
+
+}
+
+/* Notes */
+
+.notes{
+
+    margin-top:20px;
+
+    background:#0f172a;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    border-left:5px solid #22c55e;
+
+}
+
+.notes h4{
+
+    margin-bottom:10px;
+
+}
+
+.notes ul{
+
+    padding-left:18px;
+
+    color:#cbd5e1;
+
+    line-height:1.9;
+
+}
+
+/* Buttons */
+
+.action-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:25px;
+
+}
+
+.primary-btn{
+
+    background:#22c55e;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.secondary-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.youtube-btn{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+/* Done Toggle */
+
+.done{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.done input{
+
+    transform:scale(1.4);
+
+}
+
+/* Exercise Tags */
+
+.tags{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+    margin-top:18px;
+
+}
+
+.tag{
+
+    background:#334155;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.exercise-image{
+
+    height:190px;
+
+}
+
+.exercise-title{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+.target-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.info-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.action-buttons{
+
+    flex-direction:column;
+
+}
+
+.primary-btn,
+.secondary-btn,
+.youtube-btn{
+
+    width:100%;
+
+}
+
+}
