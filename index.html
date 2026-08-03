@@ -1,86 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<!DOCTYPE html><html><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PPL A/B Fitness Dashboard</title>
-<style>
-body{font-family:Arial;background:#111827;color:#eee;margin:0}
-header{background:#1f2937;padding:20px;text-align:center}
-.container{max-width:1100px;margin:auto;padding:20px}
-.card{background:#1f2937;border-radius:10px;padding:16px;margin:16px 0}
-table{width:100%;border-collapse:collapse}
-th,td{border:1px solid #374151;padding:8px}
-th{background:#0f172a}
-small{color:#9ca3af}
-</style></head><body>
-<header><h1>5-Day PPL A/B Program</h1>
-<p>Goal: Fat Loss + Muscle Gain | 86 kg | 168 cm</p></header>
-<div class="container">
-<div class="card"><h2>Weekly Split</h2>
-<table><tr><th>Day</th><th>Workout</th></tr>
-<tr><td>Monday</td><td>Push A</td></tr>
-<tr><td>Tuesday</td><td>Pull A</td></tr>
-<tr><td>Wednesday</td><td>Legs</td></tr>
-<tr><td>Thursday</td><td>Push B</td></tr>
-<tr><td>Friday</td><td>Pull B</td></tr>
-</table></div>
+<head>
 
-<div class="card"><h2>Push A</h2>
-<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
-<tr><td>Incline Barbell Press</td><td>Upper Chest</td><td>4×6-8</td></tr>
-<tr><td>Flat Dumbbell Press</td><td>Mid Chest</td><td>3×8-10</td></tr>
-<tr><td>High-to-Low Cable Fly</td><td>Lower Chest</td><td>3×12-15</td></tr>
-<tr><td>Seated DB Shoulder Press</td><td>Front Delts</td><td>3×8-10</td></tr>
-<tr><td>DB Lateral Raise</td><td>Side Delts</td><td>4×12-15</td></tr>
-<tr><td>Reverse Pec Deck</td><td>Rear Delts</td><td>3×15</td></tr>
-<tr><td>Rope Pushdown</td><td>Lateral Triceps</td><td>3×10-12</td></tr>
-<tr><td>Overhead Rope Extension</td><td>Long Head</td><td>3×10-12</td></tr></table></div>
+    <meta charset="UTF-8">
 
-<div class="card"><h2>Pull A</h2>
-<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
-<tr><td>Wide Lat Pulldown</td><td>Lat Width</td><td>3×10</td></tr>
-<tr><td>Barbell Row</td><td>Mid Back</td><td>3×8</td></tr>
-<tr><td>Seated Cable Row</td><td>Thickness</td><td>3×10-12</td></tr>
-<tr><td>Straight-arm Pulldown</td><td>Lower Lats</td><td>3×12-15</td></tr>
-<tr><td>Face Pull</td><td>Rear Delts</td><td>3×15</td></tr>
-<tr><td>EZ Curl</td><td>Biceps</td><td>3×10</td></tr>
-<tr><td>Incline DB Curl</td><td>Long Head</td><td>3×12</td></tr>
-<tr><td>Hammer Curl</td><td>Brachialis</td><td>3×12</td></tr></table></div>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<div class="card"><h2>Legs</h2>
-<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
-<tr><td>Back Squat</td><td>Quads</td><td>4×8</td></tr>
-<tr><td>Romanian Deadlift</td><td>Hamstrings</td><td>4×10</td></tr>
-<tr><td>Leg Press</td><td>Quads</td><td>3×12</td></tr>
-<tr><td>Leg Curl</td><td>Hamstrings</td><td>3×15</td></tr>
-<tr><td>Bulgarian Split Squat</td><td>Glutes</td><td>3×12</td></tr>
-<tr><td>Standing Calf Raise</td><td>Calves</td><td>4×15</td></tr>
-<tr><td>Cable Crunch + Hanging Leg Raise</td><td>Core</td><td>3×15</td></tr></table></div>
+    <title>GYM Dashboard | PPL A/B</title>
 
-<div class="card"><h2>Push B</h2>
-<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
-<tr><td>Incline DB Press</td><td>Upper Chest</td><td>4×8-10</td></tr>
-<tr><td>Machine Chest Press</td><td>Mid Chest</td><td>3×10</td></tr>
-<tr><td>Decline Press / Assisted Dips</td><td>Lower Chest</td><td>3×10-12</td></tr>
-<tr><td>Machine Shoulder Press</td><td>Front Delts</td><td>3×10</td></tr>
-<tr><td>Cable Lateral Raise</td><td>Side Delts</td><td>4×15</td></tr>
-<tr><td>Face Pull</td><td>Rear Delts</td><td>3×15</td></tr>
-<tr><td>Straight Bar Pushdown</td><td>Lateral Triceps</td><td>3×12</td></tr>
-<tr><td>Overhead DB Extension</td><td>Long Head</td><td>3×12</td></tr></table></div>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/cards.css">
 
-<div class="card"><h2>Pull B</h2>
-<table><tr><th>Exercise</th><th>Targets</th><th>Sets×Reps</th></tr>
-<tr><td>Close Grip Pulldown</td><td>Lower Lats</td><td>3×10</td></tr>
-<tr><td>Chest Supported Row</td><td>Mid Back</td><td>3×10</td></tr>
-<tr><td>Single Arm DB Row</td><td>Lats</td><td>3×10</td></tr>
-<tr><td>Cable Row</td><td>Thickness</td><td>3×12</td></tr>
-<tr><td>Preacher Curl</td><td>Short Head</td><td>3×10</td></tr>
-<tr><td>Bayesian Cable Curl</td><td>Long Head</td><td>3×12</td></tr>
-<tr><td>Cross-body Hammer Curl</td><td>Brachialis</td><td>3×12</td></tr></table></div>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-<div class="card"><h2>Notes</h2><ul>
-<li>Cardio: 20 min treadmill (6 incline, 4.5 km/h) + 10 min cross trainer.</li>
-<li>Protein: 160-170 g/day.</li>
-<li>Calories: ~2100/day.</li>
-<li>Increase weight when you reach the top of the rep range with good form.</li>
-</ul></div>
-</div></body></html>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ======================================
+                SIDEBAR
+    ======================================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏋️ GYM Dashboard</h2>
+
+            <p style="color:#94a3b8;margin-top:10px;">
+                PPL A/B Training
+            </p>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="push-a.html">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    Push A
+                </a>
+            </li>
+
+            <li>
+                <a href="pull-a.html">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                    Pull A
+                </a>
+            </li>
+
+            <li>
+                <a href="legs.html">
+                    <i class="fa-solid fa-person-running"></i>
+                    Legs
+                </a>
+            </li>
+
+            <li>
+                <a href="push-b.html">
+                    <i class="fa-solid fa-fire"></i>
+                    Push B
+                </a>
+            </li>
+
+            <li>
+                <a href="pull-b.html">
+                    <i class="fa-solid fa-weight-hanging"></i>
+                    Pull B
+                </a>
+            </li>
+
+            <li>
+                <a href="library.html">
+                    <i class="fa-solid fa-book-open"></i>
+                    Exercise Library
+                </a>
+            </li>
+
+        </ul>
+
+        <br><br>
+
+        <div class="card">
+
+            <h3 style="color:#22c55e;">
+                Current Goal
+            </h3>
+
+            <br>
+
+            <p>
+
+                🔥 Fat Loss
+
+            </p>
+
+            <p>
+
+                💪 Muscle Gain
+
+            </p>
+
+            <p>
+
+                📅 5 Days / Week
+
+            </p>
+
+            <p>
+
+                🚶 30 min Cardio
+
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- ======================================
+                MAIN CONTENT
+    ======================================= -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+
+                <h1>
+
+                    Welcome Kiran 👋
+
+                </h1>
+
+                <p>
+
+                    Your Personal Workout Companion
+
+                </p>
+
+            </div>
+
+            <button>
+
+                Open Today's Workout
+
+            </button>
+
+        </div>
+
+        <!-- ======================================
+                    HERO
+        ======================================= -->
+
+        <section class="hero">
+
+            <div>
+
+                <h1>
+
+                    Build Muscle.
+                    Burn Fat.
+                    Stay Consistent.
+
+                </h1>
+
+                <p>
+
+                    This dashboard is designed to complement
+                    <strong>Hevy</strong>.
+
+                    <br><br>
+
+                    ✔ Plan workouts
+
+                    <br>
+
+                    ✔ Check muscle coverage
+
+                    <br>
+
+                    ✔ View exercise alternatives
+
+                    <br>
+
+                    ✔ Know why every exercise exists
+
+                </p>
+
+            </div>
+
+            <img
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600"
+            alt="Gym">
+
+        </section>
+
+        <!-- ======================================
+                  QUICK STATS
+        ======================================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-title">
+
+                    Weight
+
+                </div>
+
+                <div class="stat-value">
+
+                    86 kg
+
+                </div>
+
+                <div class="stat-sub">
+
+                    Goal → 75–78 kg
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-title">
+
+                    Height
+
+                </div>
+
+                <div class="stat-value">
+
+                    168 cm
+
+                </div>
+
+                <div class="stat-sub">
+
+                    Moderate Activity
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-title">
+
+                    Calories
+
+                </div>
+
+                <div class="stat-value">
+
+                    2100
+
+                </div>
+
+                <div class="stat-sub">
+
+                    Fat Loss Target
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-title">
+
+                    Protein
+
+                </div>
+
+                <div class="stat-value">
+
+                    170 g
+
+                </div>
+
+                <div class="stat-sub">
+
+                    Daily Target
+
+                </div>
+
+            </div>
+
+        </section>
+                <!-- ======================================
+                    WEEKLY SPLIT
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📅 Weekly Workout Split</h2>
+
+            <p style="color:#94a3b8;margin-bottom:25px;">
+                Train every muscle twice per week (except legs) with different movement patterns.
+            </p>
+
+            <div class="week-grid">
+
+                <div class="day-card"
+                     onclick="location.href='push-a.html'">
+
+                    <h3>💪 Monday</h3>
+
+                    <h2>Push A</h2>
+
+                    <p>
+                        Chest<br>
+                        Shoulders<br>
+                        Triceps
+                    </p>
+
+                </div>
+
+                <div class="day-card"
+                     onclick="location.href='pull-a.html'">
+
+                    <h3>🏋 Tuesday</h3>
+
+                    <h2>Pull A</h2>
+
+                    <p>
+                        Back<br>
+                        Biceps<br>
+                        Rear Delts
+                    </p>
+
+                </div>
+
+                <div class="day-card"
+                     onclick="location.href='legs.html'">
+
+                    <h3>🦵 Wednesday</h3>
+
+                    <h2>Legs</h2>
+
+                    <p>
+                        Quads<br>
+                        Hamstrings<br>
+                        Glutes & Core
+                    </p>
+
+                </div>
+
+                <div class="day-card"
+                     onclick="location.href='push-b.html'">
+
+                    <h3>🔥 Thursday</h3>
+
+                    <h2>Push B</h2>
+
+                    <p>
+                        Chest<br>
+                        Shoulders<br>
+                        Triceps
+                    </p>
+
+                </div>
+
+                <div class="day-card"
+                     onclick="location.href='pull-b.html'">
+
+                    <h3>💥 Friday</h3>
+
+                    <h2>Pull B</h2>
+
+                    <p>
+                        Back<br>
+                        Biceps<br>
+                        Rear Delts
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                TODAY'S WORKOUT
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🎯 Today's Workout</h2>
+
+            <div class="grid">
+
+                <div class="goal-card">
+
+                    <h3>Workout</h3>
+
+                    <p style="margin-top:15px;line-height:1.8;">
+
+                        Push A
+
+                        <br><br>
+
+                        ✔ Upper Chest
+
+                        <br>
+
+                        ✔ Middle Chest
+
+                        <br>
+
+                        ✔ Stretch Movement
+
+                        <br>
+
+                        ✔ Peak Contraction
+
+                        <br>
+
+                        ✔ Front Delts
+
+                        <br>
+
+                        ✔ Side Delts
+
+                        <br>
+
+                        ✔ Rear Delts
+
+                        <br>
+
+                        ✔ Long Head Triceps
+
+                        <br>
+
+                        ✔ Lateral Head Triceps
+
+                    </p>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Cardio</h3>
+
+                    <p style="margin-top:15px;line-height:1.8;">
+
+                        Incline Walk
+
+                        <br>
+
+                        20 Minutes
+
+                        <br><br>
+
+                        Incline
+
+                        <strong>6</strong>
+
+                        <br>
+
+                        Speed
+
+                        <strong>4.5 km/h</strong>
+
+                        <br><br>
+
+                        Cross Trainer
+
+                        <br>
+
+                        10 Minutes
+
+                        <br>
+
+                        Speed 11–12
+
+                    </p>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Daily Checklist</h3>
+
+                    <p style="line-height:2;">
+
+                        ☐ Drink 3.5L Water
+
+                        <br>
+
+                        ☐ Protein 170g
+
+                        <br>
+
+                        ☐ Sleep 7-8 Hours
+
+                        <br>
+
+                        ☐ Warm Up
+
+                        <br>
+
+                        ☐ Stretch After Workout
+
+                        <br>
+
+                        ☐ Complete Cardio
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                TRAINING PRINCIPLES
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📚 Training Principles</h2>
+
+            <div class="goal-grid">
+
+                <div class="goal-card">
+
+                    <h3>Progressive Overload</h3>
+
+                    <ul>
+
+                        <li>Increase weight gradually</li>
+
+                        <li>Keep proper form</li>
+
+                        <li>Log everything in Hevy</li>
+
+                        <li>Aim for top of rep range</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Rep Ranges</h3>
+
+                    <ul>
+
+                        <li>Compound : 6–10</li>
+
+                        <li>Machines : 8–12</li>
+
+                        <li>Isolation : 12–15</li>
+
+                        <li>Rear Delts : 15–20</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Rest Between Sets</h3>
+
+                    <ul>
+
+                        <li>Heavy Press : 2–3 min</li>
+
+                        <li>Rows : 2 min</li>
+
+                        <li>Isolation : 60–90 sec</li>
+
+                        <li>Cardio after workout</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+                <!-- ======================================
+                NUTRITION DASHBOARD
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🍽 Nutrition Dashboard</h2>
+
+            <p style="color:#94a3b8;margin-bottom:25px;">
+                Daily nutrition targets for fat loss while maintaining muscle mass.
+            </p>
+
+            <div class="nutrition">
+
+                <div class="nutrition-card">
+
+                    <h2>2100</h2>
+
+                    <p>Calories</p>
+
+                </div>
+
+                <div class="nutrition-card">
+
+                    <h2>170g</h2>
+
+                    <p>Protein</p>
+
+                </div>
+
+                <div class="nutrition-card">
+
+                    <h2>180g</h2>
+
+                    <p>Carbohydrates</p>
+
+                </div>
+
+                <div class="nutrition-card">
+
+                    <h2>60g</h2>
+
+                    <p>Healthy Fats</p>
+
+                </div>
+
+                <div class="nutrition-card">
+
+                    <h2>3.5L</h2>
+
+                    <p>Water Intake</p>
+
+                </div>
+
+                <div class="nutrition-card">
+
+                    <h2>30g</h2>
+
+                    <p>Fiber</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                DAILY MEAL PLAN
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🥗 Daily Meal Reference</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Meal</th>
+
+                    <th>Foods</th>
+
+                    <th>Approx Protein</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>Breakfast</td>
+
+                    <td>
+                        Protein Oats +
+                        Milk +
+                        Peanut Butter +
+                        Chia Seeds +
+                        Gond Kathira
+                    </td>
+
+                    <td>45g</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Lunch</td>
+
+                    <td>
+                        Rice / Chapati +
+                        Chicken +
+                        Vegetables
+                    </td>
+
+                    <td>45g</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Pre/Post Workout</td>
+
+                    <td>
+                        Whey +
+                        Banana
+                    </td>
+
+                    <td>25g</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Dinner</td>
+
+                    <td>
+                        Chicken /
+                        Eggs /
+                        Paneer +
+                        Salad
+                    </td>
+
+                    <td>45g</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ======================================
+                WATER TRACKER
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>💧 Water Intake</h2>
+
+            <p>Daily Goal: <strong>3.5 Litres</strong></p>
+
+            <div class="progress-large">
+
+                <div
+                    class="progress-fill"
+                    style="width:70%;">
+                </div>
+
+            </div>
+
+            <br>
+
+            <small>
+                Example Progress:
+                2.5L / 3.5L
+            </small>
+
+        </div>
+
+        <!-- ======================================
+                FAT LOSS PROGRESS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🔥 Fat Loss Goal</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Current Weight</th>
+
+                    <th>Target Weight</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>86 kg</td>
+
+                    <td>75–78 kg</td>
+
+                    <td>In Progress</td>
+
+                </tr>
+
+            </table>
+
+            <br>
+
+            <div class="progress-large">
+
+                <div
+                    class="progress-fill"
+                    style="width:25%;">
+                </div>
+
+            </div>
+
+            <br>
+
+            <small>
+
+                Estimated duration:
+                5–7 months with consistency.
+
+            </small>
+
+        </div>
+
+        <!-- ======================================
+                WORKOUT REMINDERS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📌 Daily Reminders</h2>
+
+            <ul style="line-height:2; padding-left:20px; color:#cbd5e1;">
+
+                <li>✔ Warm up for 10 minutes before lifting.</li>
+
+                <li>✔ Prioritize good form over heavier weights.</li>
+
+                <li>✔ Train close to failure (1–2 RIR).</li>
+
+                <li>✔ Perform cardio after strength training.</li>
+
+                <li>✔ Stretch tight muscle groups after the session.</li>
+
+                <li>✔ Log every set in Hevy.</li>
+
+                <li>✔ Sleep 7–8 hours every night.</li>
+
+            </ul>
+
+        </div>
+                <!-- ======================================
+                MUSCLE COVERAGE
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>💪 Weekly Muscle Coverage</h2>
+
+            <p style="color:#94a3b8;margin-bottom:25px;">
+                Every muscle should be trained with different movement patterns instead of repeating the same exercise.
+            </p>
+
+            <div class="coverage-grid">
+
+                <!-- Chest -->
+
+                <div class="coverage-card">
+
+                    <h3>🏋 Chest</h3>
+
+                    <div class="coverage-item">
+                        <span>Upper Chest</span>
+                        <span>✔ Incline Presses</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Middle Chest</span>
+                        <span>✔ Flat Presses</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Lower Chest</span>
+                        <span>✔ Dips / Decline</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Stretch</span>
+                        <span>✔ Cable Fly</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Peak Contraction</span>
+                        <span>✔ Pec Deck</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                </div>
+
+                <!-- Back -->
+
+                <div class="coverage-card">
+
+                    <h3>🦍 Back</h3>
+
+                    <div class="coverage-item">
+                        <span>Width</span>
+                        <span>✔ Pulldowns</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Thickness</span>
+                        <span>✔ Rows</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Lower Lats</span>
+                        <span>✔ Straight Arm Pulldown</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Upper Back</span>
+                        <span>✔ Face Pull</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Unilateral</span>
+                        <span>✔ Single Arm Row</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                </div>
+
+                <!-- Shoulders -->
+
+                <div class="coverage-card">
+
+                    <h3>🎯 Shoulders</h3>
+
+                    <div class="coverage-item">
+                        <span>Front Delts</span>
+                        <span>✔ Press</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Side Delts</span>
+                        <span>✔ Lateral Raise</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Rear Delts</span>
+                        <span>✔ Face Pull / Reverse Pec Deck</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                </div>
+
+                <!-- Arms -->
+
+                <div class="coverage-card">
+
+                    <h3>💪 Arms</h3>
+
+                    <div class="coverage-item">
+                        <span>Biceps Long Head</span>
+                        <span>✔ Incline / Bayesian</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Biceps Short Head</span>
+                        <span>✔ EZ / Preacher</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Brachialis</span>
+                        <span>✔ Hammer Curl</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Long Head Triceps</span>
+                        <span>✔ Overhead Extension</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Lateral Head</span>
+                        <span>✔ Pushdown</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                    <br>
+
+                    <div class="coverage-item">
+                        <span>Medial Head</span>
+                        <span>✔ Reverse Pushdown</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+                <!-- ======================================
+                PERSONAL RECORDS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🏆 Personal Records</h2>
+
+            <p style="color:#94a3b8;margin-bottom:25px;">
+                Update these whenever you hit a new PR.
+            </p>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Exercise</th>
+                    <th>Current PR</th>
+                    <th>Target</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>Bench Press</td>
+                    <td>-</td>
+                    <td>100 kg</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Incline Bench Press</td>
+                    <td>-</td>
+                    <td>80 kg</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Squat</td>
+                    <td>-</td>
+                    <td>140 kg</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Romanian Deadlift</td>
+                    <td>-</td>
+                    <td>140 kg</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Lat Pulldown</td>
+                    <td>-</td>
+                    <td>Bodyweight</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Barbell Row</td>
+                    <td>-</td>
+                    <td>100 kg</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ======================================
+                WEEKLY PROGRESS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📈 Weekly Progress</h2>
+
+            <div class="goal-grid">
+
+                <div class="goal-card">
+
+                    <h3>Workout Completion</h3>
+
+                    <div class="progress-large">
+
+                        <div class="progress-fill"
+                             style="width:100%">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <p>5 / 5 Sessions</p>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Cardio</h3>
+
+                    <div class="progress-large">
+
+                        <div class="progress-fill"
+                             style="width:100%">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <p>150 Minutes / Week</p>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Protein</h3>
+
+                    <div class="progress-large">
+
+                        <div class="progress-fill"
+                             style="width:95%">
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <p>170g Daily</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                BODY GOALS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🎯 Fitness Goals</h2>
+
+            <div class="goal-grid">
+
+                <div class="goal-card">
+
+                    <h3>Current</h3>
+
+                    <ul>
+
+                        <li>Weight : 86 kg</li>
+
+                        <li>Height : 168 cm</li>
+
+                        <li>Body Fat : Reduce</li>
+
+                        <li>Visceral Fat : Reduce</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>6 Month Goal</h3>
+
+                    <ul>
+
+                        <li>Weight : 75-78 kg</li>
+
+                        <li>Visible Upper Chest</li>
+
+                        <li>Wide Back</li>
+
+                        <li>Rounded Shoulders</li>
+
+                        <li>Visible Abs</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>Long Term</h3>
+
+                    <ul>
+
+                        <li>Athletic Physique</li>
+
+                        <li>Strong Compound Lifts</li>
+
+                        <li>Maintain Below 15% Body Fat</li>
+
+                        <li>Healthy Lifestyle</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                RECOVERY
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>❤️ Recovery Checklist</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Habit</th>
+
+                    <th>Target</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Sleep</td>
+
+                    <td>7-8 Hours</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Water</td>
+
+                    <td>3.5 Litres</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Protein</td>
+
+                    <td>170g</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Warm-up</td>
+
+                    <td>10 Minutes</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Stretching</td>
+
+                    <td>10 Minutes</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Steps</td>
+
+                    <td>8000-10000</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- ======================================
+                MOTIVATION
+        ======================================= -->
+
+        <div class="tip">
+
+            <h3>🔥 Remember</h3>
+
+            <p>
+
+                Consistency beats perfection.
+
+                Progressive overload + proper nutrition +
+                recovery + patience =
+                an incredible physique.
+
+                Every workout counts.
+
+            </p>
+
+        </div>
+                <!-- ======================================
+                PHYSIQUE PROGRESS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📸 Monthly Physique Progress</h2>
+
+            <p style="color:#94a3b8;margin-bottom:20px;">
+                Take photos once every 4 weeks under the same lighting and pose.
+            </p>
+
+            <div class="grid">
+
+                <div class="goal-card" style="text-align:center;">
+                    <h3>Front</h3>
+                    <img src="https://placehold.co/300x400/1f2937/ffffff?text=Front+Photo"
+                         style="width:100%;border-radius:12px;">
+                </div>
+
+                <div class="goal-card" style="text-align:center;">
+                    <h3>Side</h3>
+                    <img src="https://placehold.co/300x400/1f2937/ffffff?text=Side+Photo"
+                         style="width:100%;border-radius:12px;">
+                </div>
+
+                <div class="goal-card" style="text-align:center;">
+                    <h3>Back</h3>
+                    <img src="https://placehold.co/300x400/1f2937/ffffff?text=Back+Photo"
+                         style="width:100%;border-radius:12px;">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                BODY MEASUREMENTS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📏 Body Measurements</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Body Part</th>
+                    <th>Current</th>
+                    <th>Goal</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Chest</td>
+                        <td>-</td>
+                        <td>110 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Waist</td>
+                        <td>-</td>
+                        <td>Below 85 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Right Arm</td>
+                        <td>-</td>
+                        <td>42 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Left Arm</td>
+                        <td>-</td>
+                        <td>42 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Right Thigh</td>
+                        <td>-</td>
+                        <td>62 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Left Thigh</td>
+                        <td>-</td>
+                        <td>62 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td>Calves</td>
+                        <td>-</td>
+                        <td>40 cm</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ======================================
+                DASHBOARD SHORTCUTS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>⚡ Quick Navigation</h2>
+
+            <div class="week-grid">
+
+                <div class="day-card" onclick="location.href='push-a.html'">
+                    <h2>💪 Push A</h2>
+                    <p>Chest • Shoulders • Triceps</p>
+                </div>
+
+                <div class="day-card" onclick="location.href='pull-a.html'">
+                    <h2>🏋 Pull A</h2>
+                    <p>Back • Biceps</p>
+                </div>
+
+                <div class="day-card" onclick="location.href='legs.html'">
+                    <h2>🦵 Legs</h2>
+                    <p>Lower Body</p>
+                </div>
+
+                <div class="day-card" onclick="location.href='push-b.html'">
+                    <h2>🔥 Push B</h2>
+                    <p>Variation Workout</p>
+                </div>
+
+                <div class="day-card" onclick="location.href='pull-b.html'">
+                    <h2>🚀 Pull B</h2>
+                    <p>Variation Workout</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                NOTES
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>📝 Workout Notes</h2>
+
+            <textarea
+                placeholder="Write today's workout notes here..."
+                style="
+                    width:100%;
+                    height:180px;
+                    background:#111827;
+                    color:white;
+                    border:1px solid #334155;
+                    border-radius:12px;
+                    padding:20px;
+                    resize:vertical;
+                    font-size:16px;
+                ">
+            </textarea>
+
+        </div>
+
+        <!-- ======================================
+                DASHBOARD QUOTE
+        ======================================= -->
+
+        <div class="quote">
+
+            "Success isn't built in one workout.
+            It's built by showing up every single day."
+
+        </div>
+                <!-- ======================================
+                USEFUL LINKS
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🔗 Useful Resources</h2>
+
+            <div class="grid">
+
+                <div class="goal-card">
+
+                    <h3>📱 Apps</h3>
+
+                    <ul>
+
+                        <li>✅ Hevy - Workout Tracking</li>
+                        <li>✅ Cronometer - Nutrition</li>
+                        <li>✅ Google Fit</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>📚 Learn Exercise Form</h3>
+
+                    <ul>
+
+                        <li>Jeff Nippard</li>
+                        <li>Renaissance Periodization</li>
+                        <li>Athlean-X</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="goal-card">
+
+                    <h3>🥗 Nutrition</h3>
+
+                    <ul>
+
+                        <li>170g Protein</li>
+                        <li>2100 Calories</li>
+                        <li>3.5L Water</li>
+                        <li>Sleep 7-8 Hours</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ======================================
+                WORKOUT PHILOSOPHY
+        ======================================= -->
+
+        <div class="card">
+
+            <h2>🏋 Training Philosophy</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Rule</th>
+
+                    <th>Description</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Progressive Overload</td>
+
+                    <td>Add reps before increasing weight.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Train Near Failure</td>
+
+                    <td>Leave only 1-2 reps in reserve.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Control Every Rep</td>
+
+                    <td>Don't rush the eccentric.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Recovery</td>
+
+                    <td>Muscles grow outside the gym.</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Consistency</td>
+
+                    <td>Follow the plan for months, not days.</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- ======================================
+                FOOTER
+        ======================================= -->
+
+        <footer class="footer">
+
+            <hr style="margin-bottom:25px;border-color:#334155;">
+
+            <h3>🏋 GYM Dashboard</h3>
+
+            <br>
+
+            <p>
+
+                Designed for a 5-Day PPL A/B Routine
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Goal:
+                Fat Loss • Muscle Gain • Progressive Overload
+
+            </p>
+
+            <br>
+
+            <small>
+
+                Version 1.0
+
+            </small>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/search.js"></script>
+<script src="js/coverage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/search.js"></script>
+<script src="js/coverage.js"></script>
+
+<script>
+// Highlight current page in sidebar
+document.addEventListener("DOMContentLoaded", () => {
+    const current = window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".sidebar a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === current) {
+            link.style.background = "#22c55e";
+            link.style.fontWeight = "600";
+        }
+    });
+});
+
+// Future feature placeholders
+console.log("🏋️ Gym Dashboard Loaded");
+</script>
+
+</body>
+</html>
